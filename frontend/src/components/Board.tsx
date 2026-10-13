@@ -72,7 +72,9 @@ export function Board() {
   return (
     <main className="flex h-screen flex-col">
       <header className="px-8 pb-4 pt-8">
-        <h1 className="text-2xl font-semibold tracking-tight text-ink">Kanban</h1>
+        <h1 className="text-2xl font-semibold tracking-tight text-ink">
+          Kanban<span className="text-accent">.</span>
+        </h1>
         <p className="mt-1 text-sm text-muted">Drag cards between columns to keep work moving.</p>
       </header>
 
@@ -105,7 +107,7 @@ export function Board() {
 
         <DragOverlay dropAnimation={{ duration: 180 }}>
           {activeCard ? (
-            <article className="rotate-2 cursor-grabbing rounded-xl border border-accent/50 bg-surface p-3.5 shadow-[0_14px_32px_rgba(73,58,62,0.22)]">
+            <article className="rotate-2 cursor-grabbing rounded-xl border border-l-4 border-accent/50 border-l-accent bg-surface p-3.5 shadow-[0_14px_32px_rgba(73,58,62,0.22)]">
               <CardBody card={activeCard} onDelete={() => {}} />
             </article>
           ) : null}

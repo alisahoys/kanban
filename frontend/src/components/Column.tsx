@@ -27,12 +27,12 @@ export function Column({ column, onRename, onAddCard, onDeleteCard }: ColumnProp
   return (
     <section
       aria-label={column.title}
-      className={`flex max-h-full w-[300px] shrink-0 flex-col rounded-2xl border bg-beige/45 transition-colors ${
-        isOver ? "border-rose bg-blush/60" : "border-line"
+      className={`flex max-h-full w-[300px] shrink-0 flex-col rounded-2xl border bg-blush/50 transition-colors ${
+        isOver ? "border-accent bg-blush" : "border-rose/40"
       }`}
     >
       <header className="flex items-center gap-2 px-4 pb-2 pt-4">
-        <span aria-hidden="true" className="h-2 w-2 rounded-full bg-accent" />
+        <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full bg-accent ring-4 ring-rose/30" />
         <input
           value={draft ?? column.title}
           onChange={(event) => setDraft(event.target.value)}
@@ -47,7 +47,7 @@ export function Column({ column, onRename, onAddCard, onDeleteCard }: ColumnProp
           aria-label={`Rename column ${column.title}`}
           className="min-w-0 flex-1 rounded-md bg-transparent px-1 py-0.5 text-sm font-semibold tracking-wide text-ink outline-none transition hover:bg-surface/70 focus:bg-surface focus:ring-2 focus:ring-accent/40"
         />
-        <span className="rounded-full bg-surface px-2 py-0.5 text-xs font-medium text-muted">
+        <span className="rounded-full bg-rose/30 px-2 py-0.5 text-xs font-semibold text-accent">
           {column.cards.length}
         </span>
       </header>

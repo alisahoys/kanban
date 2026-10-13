@@ -41,7 +41,7 @@ export function SortableCard({ card, onDelete }: CardProps) {
       style={{ transform: CSS.Transform.toString(transform), transition }}
       {...attributes}
       {...listeners}
-      className={`group cursor-grab touch-none rounded-xl border border-line bg-surface p-3.5 shadow-[0_1px_2px_rgba(73,58,62,0.05)] transition-shadow hover:shadow-[0_6px_18px_rgba(73,58,62,0.10)] active:cursor-grabbing ${
+      className={`group cursor-grab touch-none rounded-xl border border-l-4 border-blush border-l-rose bg-surface p-3.5 shadow-[0_1px_2px_rgba(199,125,150,0.12)] transition hover:border-rose hover:border-l-accent hover:shadow-[0_6px_18px_rgba(199,125,150,0.25)] active:cursor-grabbing ${
         isDragging ? "opacity-40" : ""
       }`}
     >

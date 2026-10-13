@@ -14,7 +14,7 @@
 }
 
 body {
-  background: var(--color-page);
+  background: linear-gradient(160deg, var(--color-page) 0%, var(--color-blush) 130%) fixed;
   color: var(--color-ink);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
