@@ -25,7 +25,11 @@ export function CardBody({ card, onDelete }: CardProps) {
           </svg>
         </button>
       </div>
-      {card.details && <p className="mt-1.5 text-[13px] leading-relaxed text-muted">{card.details}</p>}
+      {card.details && (
+        <p className="mt-2 rounded-lg bg-beige/30 px-2 py-1.5 text-[12.5px] leading-relaxed text-muted">
+          {card.details}
+        </p>
+      )}
     </>
   );
 }
@@ -41,8 +45,8 @@ export function SortableCard({ card, onDelete }: CardProps) {
       style={{ transform: CSS.Transform.toString(transform), transition }}
       {...attributes}
       {...listeners}
-      className={`group cursor-grab touch-none rounded-xl border border-l-4 border-blush border-l-rose bg-surface p-3.5 shadow-[0_1px_2px_rgba(199,125,150,0.12)] transition hover:border-rose hover:border-l-accent hover:shadow-[0_6px_18px_rgba(199,125,150,0.25)] active:cursor-grabbing ${
-        isDragging ? "opacity-40" : ""
+      className={`group cursor-grab touch-none rounded-2xl border border-l-4 border-blush border-l-rose bg-surface/95 p-3.5 shadow-[0_10px_18px_rgba(73,58,62,0.06)] transition-all duration-200 hover:-translate-y-0.5 hover:border-rose hover:border-l-accent hover:shadow-[0_16px_28px_rgba(199,125,150,0.18)] active:cursor-grabbing ${
+        isDragging ? "scale-[0.985] opacity-40" : ""
       }`}
     >
       <CardBody card={card} onDelete={onDelete} />

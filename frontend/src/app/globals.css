@@ -13,8 +13,38 @@
   --font-sans: var(--font-geist-sans);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: linear-gradient(160deg, var(--color-page) 0%, var(--color-blush) 130%) fixed;
+  background:
+    radial-gradient(circle at top left, rgba(199, 125, 150, 0.18), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(217, 166, 179, 0.2), transparent 28%),
+    linear-gradient(160deg, var(--color-page) 0%, #f9f0f3 48%, var(--color-blush) 100%) fixed;
   color: var(--color-ink);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(199, 125, 150, 0.6) rgba(255, 255, 255, 0.15);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(199, 125, 150, 0.55);
+  border-radius: 999px;
+}
+
+::selection {
+  background: rgba(199, 125, 150, 0.22);
 }
