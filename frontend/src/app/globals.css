@@ -13,15 +13,24 @@
   --font-sans: var(--font-geist-sans);
 }
 
+html,
+body {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(199, 125, 150, 0.18), transparent 34%),
-    radial-gradient(circle at bottom right, rgba(217, 166, 179, 0.2), transparent 28%),
-    linear-gradient(160deg, var(--color-page) 0%, #f9f0f3 48%, var(--color-blush) 100%) fixed;
+    radial-gradient(circle at top left, rgba(199, 125, 150, 0.22), transparent 42%),
+    radial-gradient(circle at bottom right, rgba(217, 166, 179, 0.25), transparent 38%),
+    linear-gradient(160deg, var(--color-page) 0%, #faedf1 45%, var(--color-blush) 100%) fixed;
   color: var(--color-ink);
   font-family: var(--font-geist-sans), system-ui, sans-serif;
 }
