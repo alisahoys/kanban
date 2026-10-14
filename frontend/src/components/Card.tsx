@@ -18,7 +18,7 @@ export function CardBody({ card, onDelete }: CardProps) {
           type="button"
           aria-label={`Delete ${card.title}`}
           onClick={() => onDelete(card.id)}
-          className="-mr-1 -mt-1 rounded-md p-1 text-muted opacity-0 transition hover:bg-blush hover:text-accent focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-accent group-hover:opacity-100"
+          className="-mr-1 -mt-1 shrink-0 rounded-md p-1 text-muted transition hover:bg-blush hover:text-accent focus-visible:outline-2 focus-visible:outline-accent sm:opacity-0 sm:group-hover:opacity-100 sm:focus-visible:opacity-100"
         >
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
             <path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
